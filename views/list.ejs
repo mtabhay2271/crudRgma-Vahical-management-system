@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>All Vehicle</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="row  ml-4 mr-4 " style="border: solid">
+      <h1 style="text-align: center">All Vehicle</h1><br/>
+      <form name="form1"  method="post">
+        <table class="table table-striped">
+          <tr>
+            <td colspan="2">
+              <a class="btn btn-secondary" href='/vehicals/' ><i class="fa fa-plus">Employee</i></a>                           
+               
+            </td>
+          </tr>
+          <tr>
+           
+            <td></td>
+            <td>Model Name</th>
+              <td></td>
+            <td>Make</td>
+            <td></td>
+            <td>year</td>
+            <td></td>
+            <td>Action</td>
+          </tr>
+              <!-- printing Employee list -->
+            <% list.forEach(function(row) { %>
+              <tr>
+                <td></td>
+                <td><%= row.modelName %></td>
+                <td></td>
+                <td><%= row.make %></td>
+                <td></td>
+                <td><%= row.year %></td>
+                <td></td>
+                <td>
+                  <!-- Edit button -->
+                  <a class="btn btn-secondary" href='/vehicals/edit/<%= row._id %>' id="<%= row._id %>"><i  class="fa fa-pencil">Edit</i></a>                           
+                
+                  <!-- Delete button -->
+                  <a class="btn btn-secondary" href="/vehicals/delete/<%= row._id %>" id="<%= row._id %>"><i class="fa fa-list-alt" >delete</i></a>
+                </td>
+            </tr> <% }); %>
+
+          
+                       
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicals</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link href="/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="row">
+      <h1 style="text-align: center">Fill details</h1>
+    </div>
+    <div class="row" style="border: solid">
+      
+     <form name="form1" method="GET" action="/vehicals/create">
+        <table>
+          <tr><a class="btn btn-secondary" href="/vehicals/list"><i class="fa fa-list-alt" >All Vehicle</i></a>
+          </tr>
+          <tr>
+            <th> Model Name</th>
+            <td><input type="text" Name="modelName" /></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <th>Name</th>
+            <td><input type="text" name="make" /></td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <th>year</th>
+            <td><input type="number" name="year" min="2001" max="2016"/></td>
+          </tr>
+          <tr></tr>
+          
+            <td colspan="2">
+              <button type="submit" style="margin: 10px; margin-left: 50%;" >Save</button>
+              
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vehicals</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <link href="/css/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="row">
+      <h1 style="text-align: center">Fill details</h1>
+    </div>
+    <div class="row" style="border: solid">
+      
+     <form name="form1" method="GET" action="/vehicals/update/<%= vehicle._id %>">
+        <table>
+          <tr><a class="btn btn-secondary" href="/vehicals/list"><i class="fa fa-list-alt" >Back</i></a>
+          </tr>
+          <tr>
+            <th>Model Name</th>
+            <td><input type="text" name="modelName" value="<%= vehicle.modelName %>" /></td>
+          </tr>
+          <tr>
+            <th>Make</th>
+            <td><input type="text" Name="make" value="<%= vehicle.make %>" /></td>
+          </tr>
+          <tr></tr>
+          
+          <tr>
+            <th>year</th>
+            <td><input type="number" name="year" min="2001" max="2015" value="<%= vehicle.year %>" /></td>
+          </tr>
+          <tr></tr>
+          
+            <td colspan="2">
+              <input
+                style="margin: 10px; margin-left: 50%;"
+                type="submit"
+                value="Save"
+              />
+            </td>
+          </tr>
+        </table>
+    
+      </form>
+    </div>
+    
+  </body>
+</html>
